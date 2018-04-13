@@ -11,7 +11,7 @@ This is really just a convenience script standing on the shoulders of a some ver
 # using
 
 1. The easy way: add one script tag to your page with the following source:
-[https://raw.githubusercontent.com/fluffynuts/auto-markdown/master/auto-markdown.js](https://raw.githubusercontent.com/fluffynuts/auto-markdown/master/auto-markdown.js)
+[https://rawgit.com/fluffynuts/auto-markdown/master/auto-markdown.js](https://rawgit.com/fluffynuts/auto-markdown/master/auto-markdown.js)
 2. Download `auto-markdown.js` and reference it from wherever you keep it
 
 # how do I know you won't do something sneaky on my site?
