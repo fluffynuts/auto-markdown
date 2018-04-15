@@ -68,7 +68,10 @@
   }
 
   function renderMarkdownIn(el) {
-    var text = el.innerText,
+    var text = el.innerText
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;"),
         target = document.createElement("p"),
         converter = new showdown.Converter(),
         html = converter.makeHtml(text);
