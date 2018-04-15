@@ -67,11 +67,23 @@
     });
   }
 
-  function renderMarkdownIn(el) {
-    var text = el.innerText
+  function workaroundCode(text) {
+    var parts = text.split("`");
+    var idx = 0;
+    for (var part in parts) {
+      if (idx % 2 == 0) {
+        continue;
+      }
+      parts[idx] = parts[idx]
                 .replace(/&/g, "&amp;")
                 .replace(/</g, "&lt;")
-                .replace(/>/g, "&gt;"),
+                .replace(/>/g, "&gt;");
+    }
+    return parts.join("`");
+  }
+
+  function renderMarkdownIn(el) {
+    var text = workaroundCode(el.innerText),
         target = document.createElement("p"),
         converter = new showdown.Converter(),
         html = converter.makeHtml(text);
