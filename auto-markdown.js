@@ -124,6 +124,9 @@
       el.parentNode.insertBefore(target, el);
       el.style.display = "none";
       Array.from(target.querySelectorAll("code")).forEach(function(codeEl) {
+        if (codeEl.innerText.indexOf("\n") === -1) {
+          return; // highlighting a small <code>...</code> tagset leads to readability issues
+        }
         hljs.highlightBlock(codeEl);
       });
 
