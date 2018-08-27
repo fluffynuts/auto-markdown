@@ -129,9 +129,9 @@
         }
         hljs.highlightBlock(codeEl);
       });
+      fixRelativeImgPaths(el, target);
+      hidePostTitleIfHaveH1In(target);
     });
-    fixRelativeImgPaths(el, target);
-    hidePostTitleIfHaveH1In(target);
   }
 
   function hidePostTitleIfHaveH1In(target) {
