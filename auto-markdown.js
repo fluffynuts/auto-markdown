@@ -136,7 +136,7 @@
 
   function hidePostTitleIfHaveH1In(target) {
     if (target.querySelector("h1")) {
-      var postTitle = docuent.querySelector("h3.post-title");
+      var postTitle = document.querySelector("h3.post-title");
       if (postTitle) {
         postTitle.style.display = "none";
       }
