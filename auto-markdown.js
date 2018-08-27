@@ -129,6 +129,21 @@
         }
         hljs.highlightBlock(codeEl);
       });
+    });
+    fixRelativeImgPaths(el, target);
+    hidePostTitleIfHaveH1In(target);
+  }
+
+  function hidePostTitleIfHaveH1In(target) {
+    if (target.querySelector("h1")) {
+      var postTitle = docuent.querySelector("h3.post-title");
+      if (postTitle) {
+        postTitle.style.display = "none";
+      }
+    }
+  }
+
+  function fixRelativeImgPaths(el, target) {
 
       var remoteUrl = getSrc(el);
       if (remoteUrl) {
@@ -147,7 +162,6 @@
           img.src = [ baseUrl, src ].join("/");
         });
       }
-    });
   }
 
   document.addEventListener(
