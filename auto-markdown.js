@@ -131,7 +131,7 @@
       });
       fixRelativeImgPaths(el, target);
       hidePostTitleIfHaveH1In(target);
-      redirectMdLinksToHtmlIn(el);
+      redirectMdLinksToHtmlIn(target);
     });
   }
 
