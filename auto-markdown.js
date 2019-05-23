@@ -161,6 +161,8 @@
                 return;
             }
             anchor.href = [
+                window.location.protocol,
+                "/",
                 window.location.host,
                 year,
                 month,
