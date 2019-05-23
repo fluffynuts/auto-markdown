@@ -166,7 +166,7 @@
                 window.location.host,
                 year,
                 month,
-                doc
+                doc.replace(/_/, "")
             ].join("/");
         });
     }
