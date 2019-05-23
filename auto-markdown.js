@@ -131,6 +131,13 @@
       });
       fixRelativeImgPaths(el, target);
       hidePostTitleIfHaveH1In(target);
+      redirectMdLinksToHtmlIn(el);
+    });
+  }
+
+  function redirectMdLinksToHtmlIn(el) {
+    Array.from(el.querySelectorAll("a")).forEach(anchor => {
+      anchor.href = (anchor.href || "").replace(/\.md$/, ".html");
     });
   }
 
